@@ -4,6 +4,7 @@ from routers import films, users, auth
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
 origins = ["*"]
 
 app.add_middleware(
@@ -18,6 +19,6 @@ app.include_router(users.router)
 app.include_router(films.router)
 app.include_router(auth.router)
 
-app.get("/")
+@app.get("/")
 def root():
-    return {"message": "Hello World pushing out to ubuntu"}
+    return {"message": "Movie API"}
