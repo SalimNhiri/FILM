@@ -1,14 +1,12 @@
 
 from urllib.parse import quote_plus
 
-from dotenv import load_dotenv
 
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 
 import os
 
-load_dotenv()
 passwordvalue = os.getenv("mongopswd")
 
 password = quote_plus(passwordvalue)
