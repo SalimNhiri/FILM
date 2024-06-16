@@ -20,5 +20,5 @@ app.include_router(films.router)
 app.include_router(auth.router)
 
 @app.get("/")
-def root():
+async def root():
     return {"message": "Movie API"}
