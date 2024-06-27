@@ -14,3 +14,4 @@ class Profil(BaseModel):
     #tech : List[str]
     linkedin : str
     github : str
+    creation : int = int(datetime.timestamp(datetime.utcnow()))
