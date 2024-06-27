@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from routers import films, users, auth
+from routers import films, users, auth, profils
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
@@ -18,6 +18,7 @@ app.add_middleware(
 app.include_router(users.router) 
 app.include_router(films.router)
 app.include_router(auth.router)
+app.include_router(auth.profils)
 
 @app.get("/")
 async def root():
