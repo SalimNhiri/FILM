@@ -24,9 +24,12 @@ def individual_profil(profil):
     return {
         "id": str(profil["_id"]),
         "titre" : profil["titre"],
-        "url": profil["url"],
-        "photo" : profil["photo"],
-        "added_by": profil["added_by"]
+        "position": profil["position"],
+        "companie" : profil["companie"],
+        "email": profil["email"],
+        "linkedin": str(profil["linkedin"]),
+        "github" : profil["github"],
+
     }
     
 def all_profil(profils):
