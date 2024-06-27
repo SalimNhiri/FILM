@@ -6,7 +6,7 @@ from pydantic import BaseModel, EmailStr
 
 class Profil(BaseModel):
     id: str
-    user_id: str
+    user_id: EmailStr
     position: str
     titre : str
     companie : str
