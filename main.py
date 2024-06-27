@@ -18,7 +18,7 @@ app.add_middleware(
 app.include_router(users.router) 
 app.include_router(films.router)
 app.include_router(auth.router)
-app.include_router(auth.profils)
+app.include_router(profils.router)
 
 @app.get("/")
 async def root():
