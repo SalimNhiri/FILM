@@ -2,6 +2,9 @@ from pydantic import BaseModel, EmailStr
 from typing import Optional
 from datetime import datetime
 
+#################
+# moovie
+##################
 def individual_movie(film):
     return {
         "id": str(film["_id"]),
@@ -13,9 +16,25 @@ def individual_movie(film):
     
 def all_movies(films):
     return [individual_movie(film) for film in films]
+    
+#################
+# profil
+##################
+def individual_profil(profil):
+    return {
+        "id": str(profil["_id"]),
+        "titre" : profil["titre"],
+        "url": profil["url"],
+        "photo" : profil["photo"],
+        "added_by": profil["added_by"]
+    }
+    
+def all_profil(profils):
+    return [individual_profil(profil) for profil in profils]
 
-
-
+#################
+# user
+##################
 def individual_user(user):
     return {
         "id": str(user["_id"]),
@@ -26,7 +45,10 @@ def individual_user(user):
     
 def all_users(users):
     return [individual_user(user) for user in users]
-
+    
+#################
+# MODELS 
+##################
     
 class Userlogin(BaseModel):
     email : EmailStr
@@ -39,5 +61,13 @@ class Token(BaseModel):
 class TokenData(BaseModel):
     id : Optional[str] = None
     
-    
+class ProfilData(BaseModel):
+    id: str
+    user_id: str
+    position: str
+    companie : str
+    email : EmailStr
+    #tech : List[str]
+    linkedin : str
+    github : str
     
