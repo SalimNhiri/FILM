@@ -8,6 +8,7 @@ class Profil(BaseModel):
     id: str
     user_id: str
     position: str
+    titre : str
     companie : str
     email : EmailStr
     #tech : List[str]
