@@ -64,6 +64,7 @@ class TokenData(BaseModel):
 class ProfilData(BaseModel):
     id: str
     user_id: str
+    titre: str
     position: str
     companie : str
     email : EmailStr
