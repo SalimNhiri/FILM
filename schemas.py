@@ -29,6 +29,7 @@ def individual_profil(profil):
         "email": profil["email"],
         "linkedin": str(profil["linkedin"]),
         "github" : profil["github"],
+        "creation" : profil["creation"]
 
     }
     
@@ -74,4 +75,5 @@ class ProfilData(BaseModel):
     #tech : List[str]
     linkedin : str
     github : str
+    creation : int = int(datetime.timestamp(datetime.utcnow()))
     
