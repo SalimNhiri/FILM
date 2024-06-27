@@ -11,4 +11,4 @@ class Profil(BaseModel):
     companie : EmailStr
     #tech : List[str]
     linkedin : str
-    GitHub : str
+    github : str
